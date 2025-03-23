@@ -1,0 +1,13 @@
+<h2>💳 Wallet: <span>{{ walletAddress || 'No conectada' }}</span></h2>
+<h3>💰 JNT Balance: <span>{{ tokenBalance }}</span></h3>
+
+<button (click)="connectWallet()">🔌 Conectar MetaMask</button>
+
+<hr />
+
+<h3>📤 Enviar JoseTokens</h3>
+<input type="text" placeholder="Dirección destino" [(ngModel)]="recipient" />
+<input type="number" placeholder="Cantidad de JNT" [(ngModel)]="amount" />
+<button (click)="sendTokens()">🚀 Enviar</button>
+
+<p>{{ status }}</p>
